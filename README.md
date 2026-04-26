@@ -1,65 +1,40 @@
-# Mini CRM Application
+🌐 Live Demo
 
-A complete production-ready Customer Relationship Management (CRM) system built with the MERN stack (MongoDB, Express.js, React, Node.js).
+👉 https://interview-task-teal-two.vercel.app/login
 
-## 🚀 Features
+🔑 Demo Credentials
+admin@example.com || password123
+john@example.com  || 12345678
+jane@example.com  || 12345678
+mike@example.com  || 12345678
 
-### Authentication
-- JWT-based authentication
-- Password hashing with bcrypt
-- Protected routes
-- Login/Register functionality
 
-### Lead Management
-- Create, read, update, and delete leads
-- Soft delete functionality
-- Pagination, search, and filtering
-- Lead status tracking (New, Contacted, Lost)
+🔐 Authorization Logic (Simple Explanation)
 
-### Company Management
-- Company CRUD operations
-- View associated leads per company
-- Company details with lead lists
+This application uses JWT (JSON Web Token) for authentication and authorization.
 
-### Task Management
-- Create tasks linked to leads
-- Assign tasks to users
-- Due date tracking
-- Task status updates (Pending/Completed)
-- Only assigned users can update tasks
-
-### Dashboard
-- Real-time statistics
-- Total leads, qualified leads
-- Tasks due today, completed tasks
-- Recent leads and status distribution
-
-## 🛠️ Tech Stack
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB with Mongoose
-- JWT for authentication
-- bcrypt for password hashing
-
-### Frontend
-- React 18 with Hooks
-- React Router DOM for routing
-- Material-UI (MUI) for components
-- Axios for API calls
-- React Hot Toast for notifications
-- TanStack Query for data fetching
-
-## 📋 Prerequisites
-
-- Node.js (v14 or higher)
-- MongoDB (local or Atlas)
-- npm or yarn
-
-## 🔧 Installation
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/yourusername/interview-task.git
-cd interview-task
+1. Login Flow
+User enters email & password
+Backend verifies credentials using bcrypt (hashed password comparison)
+If valid, server generates a JWT token
+Token is sent to the frontend
+2. Token Storage
+Token is stored on the client side (usually in localStorage)
+It is attached to every API request in headers:
+Authorization: Bearer <token>
+3. Protected Routes (Backend)
+Middleware checks:
+Token exists
+Token is valid (verified using secret key)
+If valid → request proceeds
+If invalid/expired → access denied
+4. Role/Access Control (Basic)
+Only authenticated users can:
+Manage leads
+Create/update tasks
+View dashboard
+Task-specific rule:
+Only the assigned user can update that task
+5. Frontend Protection
+Routes are protected using React Router
+If no token → redirect to login page
