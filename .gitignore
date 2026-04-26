@@ -1,0 +1,40 @@
+# Create .gitignore file
+echo "# Dependencies" > .gitignore
+echo "node_modules/" >> .gitignore
+echo "client/node_modules/" >> .gitignore
+echo "server/node_modules/" >> .gitignore
+echo "" >> .gitignore
+echo "# Environment files" >> .gitignore
+echo ".env" >> .gitignore
+echo ".env.local" >> .gitignore
+echo ".env.*.local" >> .gitignore
+echo "server/.env" >> .gitignore
+echo "client/.env" >> .gitignore
+echo "" >> .gitignore
+echo "# Build outputs" >> .gitignore
+echo "build/" >> .gitignore
+echo "dist/" >> .gitignore
+echo "client/build/" >> .gitignore
+echo "" >> .gitignore
+echo "# Logs" >> .gitignore
+echo "*.log" >> .gitignore
+echo "npm-debug.log*" >> .gitignore
+echo "" >> .gitignore
+echo "# IDE files" >> .gitignore
+echo ".vscode/" >> .gitignore
+echo ".idea/" >> .gitignore
+echo "*.swp" >> .gitignore
+echo "*.swo" >> .gitignore
+echo "" >> .gitignore
+echo "# OS files" >> .gitignore
+echo ".DS_Store" >> .gitignore
+echo "Thumbs.db" >> .gitignore
+echo "desktop.ini" >> .gitignore
+echo "" >> .gitignore
+echo "# Temporary files" >> .gitignore
+echo "*.tmp" >> .gitignore
+echo "*.temp" >> .gitignore
+echo "" >> .gitignore
+echo "# Coverage" >> .gitignore
+echo "coverage/" >> .gitignore
+echo ".nyc_output/" >> .gitignore
