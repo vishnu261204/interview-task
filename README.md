@@ -3,13 +3,13 @@
 👉 https://interview-task-teal-two.vercel.app/login
 
 🔑 Demo Credentials
-admin@example.com || password123
-john@example.com  || 12345678
-jane@example.com  || 12345678
-mike@example.com  || 12345678
+admin@example.com || password123 -
+john@example.com  || 12345678  -
+jane@example.com  || 12345678  -
+mike@example.com  || 12345678  -
 
 
-🔐 Authorization Logic (Simple Explanation)
+🔐 Authorization Logic 
 
 This application uses JWT (JSON Web Token) for authentication and authorization.
 
