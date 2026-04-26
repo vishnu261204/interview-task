@@ -61,5 +61,5 @@ A complete production-ready Customer Relationship Management (CRM) system built 
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/mini-crm.git
-cd mini-crm
+git clone https://github.com/yourusername/interview-task.git
+cd interview-task
